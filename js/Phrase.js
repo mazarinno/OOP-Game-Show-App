@@ -22,16 +22,23 @@
  		letterList.innerHTML = ""; 
  		letterList.insertAdjacentHTML('beforeend', phraseTempTwo);
  	}
-/*
+
  	checkLetter(letter) {
- 		if letter in this.phrase {
+ 		if (this.phrase.includes(letter)) {
  			return true;
  		} else {
  			return false;
  		}
  	}
 
- 	showMatchedLetter() {
-
- 	}*/
+ 	showMatchedLetter(letter) {
+ 		var sent = this.phrase;
+ 		const letterList = document.querySelector("ul");
+ 		for (var i = 0; i < sent.length; i++) {
+ 			if (letterList.children[i].classList.contains(letter)) {
+ 				letterList.children[i].classList.remove("hide");
+ 				letterList.children[i].classList.add("show");
+ 			} 
+ 		}
+ 	}
  }

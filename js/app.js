@@ -1,8 +1,18 @@
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
  * app.js */
- const game = new Game();
- word = game.getRandomPhrase();
- rando = new Phrase(word);
- console.log(rando);
- rando.addPhraseToDisplay();
+var game = '';
+const button = document.getElementById("btn__reset");
+
+button.addEventListener('click', (event) => {
+	game = new Game();
+	phrase = game.startGame();
+});
+
+const keyboard = document.getElementById("qwerty");
+keyboard.addEventListener('click', (event) => {
+	var letter = event.target;
+	if (letter.classList == "key"){
+		game.handleInteraction(letter);
+	} 
+});
