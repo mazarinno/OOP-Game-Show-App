@@ -1,2 +1,3 @@
 # OOP-Game-Show-App
-OOP Game Show App for treehouse project 4
+
+This project is an interactive game of hangman in the browser made with JavaScript OOP. To play the game, please visit the github page for this repo.
